@@ -1,4 +1,4 @@
-# Bookstore Database System with ML Features
+# Smart Book Recommendation and Restock System
 
 ## Description
 This project encompasses the design and implementation of a comprehensive database system tailored for a bookstore, augmented with an application interface and machine learning model. The database schema efficiently manages inventory, customer relations, sales, and employee records. The application provides a user-friendly interface for interacting with the database, while the machine learning model offers predictive analytics for stock management and personalized customer recommendations.
