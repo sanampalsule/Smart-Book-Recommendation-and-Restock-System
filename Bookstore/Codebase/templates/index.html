@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link the external CSS file -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+  <title>Reader's cove</title>
+</head>
+<body>
+
+  <h1>Welcome to Reader's Cove!</h1>
+  
+  
+  <form id="form1" method="POST" action="/search">
+    <label>Search by author name:</label>
+    <input type="text" name="author"> 
+    <button type="submit">Search</button>
+  </form>
+  <form id="form2" method="POST" action="/showCatalog">
+    
+    <input type="text" name="author"> 
+    <button type="submit">View catalog</button>
+  </form>
+ 
+  <form id="form3" method="POST" action="/showRec">
+    <input type="text" name="namex"> 
+    <button type="submit">Submit</button>
+  
+   
+  <input type="text" id="textbox1" value="{{ box1 }}" disabled>
+  <input type="text" id="textbox2" value="{{ box2 }}" disabled>
+  <input type="text" id="textbox3" value="{{ box3 }}" disabled>
+  <input type="text" id="textbox4" value="{{ box4 }}" disabled>
+  <input type="text" id="textbox5" value="{{ box5 }}" disabled>
+
+  </form> 
+  <!-- Use textboxes for output -->
+  <form id="form4" method="POST" action="/showCatalog">
+    
+    <input type="text" name="author"> 
+    <button type="submit">Rating</button>
+  </form>
+
+  <form id="form5" method="POST" action="/showRating">
+    <input type="text" name="namex"> 
+    <button type="submit">Rating</button>
+  
+   
+  <input type="text" id="textbox6" value="{{ box6 }}" disabled>
+  
+
+  </form> 
+  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Search Results</h1> 
+
+{% if books %}
+
+<form method="POST" action="/checkout" onsubmit="return validateForm()">
+  <table>
+    <tr>
+      <th></th>
+      <th>Book Title</th>
+      <th>Author</th>
+    </tr>
+    
+    {% for book in books %}
+    <tr>
+      <td>
+        <input type="checkbox" name="selected_books[]" value="{{ book[0] }}">
+        <input type="hidden" name="book_ids[]" value="{{ book[0] }}">
+      </td>
+      <td>{{ book[0] }}</td>  
+      <td>{{ book[1] }}</td>
+    </tr>
+    {% endfor %}
+    
+  </table>
+  
+  <button type="submit">Proceed to Checkout</button>
+</form>
+
+<script>
+function validateForm() {
+  var checkboxes = document.getElementsByName('selected_books[]');
+  var selectedBookIds = [];
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      selectedBookIds.push(checkboxes[i].value);
+    }
+  }
+
+  // Set the selected book IDs as a comma-separated string to the hidden input
+  document.getElementsByName('book_ids[]')[0].value = selectedBookIds.join(',');
+
+  if (selectedBookIds.length === 0) {
+    alert('Please select at least one book before proceeding to checkout.');
+    return false;
+  }
+  
+  return true;
+}
+</script>
+
+{% else %}
+ <p>No books found.</p> 
+{% endif %}
+
+</body>
+</html>

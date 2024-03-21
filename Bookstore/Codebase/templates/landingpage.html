@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image:  url('/static/images/library.jpg');
+      background-size: cover; 
+      text-align: center; 
+      margin-top: 8%;
+    }
+    
+    h1 {
+      color:aliceblue;
+    }
+    
+    button {
+      display: block;
+      width: 300px;
+      height: 100px;
+      padding: 12px; 
+      font-size: 20px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin : 20px auto;
+      background-color: burlywood;
+      color: brown;
+      border:hwb(from color h w b);
+      border-radius: 25px;
+    }
+    
+  </style>  
+</head>
+
+<body>
+
+  <h1>Welcome to Reader's Cove !!</h1>
+
+    <form method="POST" action="/showEmployeeLandingPage">
+        <button type="submit" >
+            Login as Employee 
+        </button>
+    </form>
+    
+    <form method="POST" action="/showCustomerPage">
+        <button type="submit" >
+            Login as Customer 
+        </button>
+    </form>
+  
+  
+</body>
+</html>

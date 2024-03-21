@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link the external CSS file -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/customerLandingPage.css') }}">
+  <title>Reader's cove</title>
+</head>
+<body>
+
+  
+    <div class="container">
+        
+        <div class="div1">
+            
+            <form method="POST" action="/searchByAuthorName">
+                <label>Search by author name:</label>
+                <input type="text" name="author"> 
+                <button type="submit">Search</button>
+            </form>
+            <form method="POST" action="/searchByBookName">
+                <label>Search by bookname :</label>
+                <input type="text" name="bookname"> 
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+         
+        
+        <div class="div3">
+            <form method="POST" action="/showRecommendations">
+                <label>Enter a book name:</label>
+                <input type="text" name="namex"> 
+                <button type="submit">Submit</button>
+                <label>Here are your Recommendations:</label>
+                <input type="text" id="textbox1" value="{{ box1 }}" disabled>
+                <input type="text" id="textbox2" value="{{ box2 }}" disabled>
+                <input type="text" id="textbox3" value="{{ box3 }}" disabled>
+                <input type="text" id="textbox4" value="{{ box4 }}" disabled>
+                <input type="text" id="textbox5" value="{{ box5 }}" disabled>
+            </form> 
+        </div>   
+    </div>
+    <div class="div2">
+        <label>Or View entire Calalog </label>  
+        <form method="POST" action="/showCatalog">
+            <button type="submit">View catalog</button>
+        </form>
+    </div> 
+
+    
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link the external CSS file -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+  <title>Reader's cove</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="div1">
+            Add an Employee
+            <form method="POST" action="/showEmployeePage">
+                <button type="submit">Search</button>
+            </form>
+           
+        </div>
+        <div>
+            Restock books in the store
+            <form method="POST" action="/showRating">
+                <button type="submit">Restock Books</button>
+            </form> 
+        </div>
+    </div>
+    
+  
+</body>
+</html>

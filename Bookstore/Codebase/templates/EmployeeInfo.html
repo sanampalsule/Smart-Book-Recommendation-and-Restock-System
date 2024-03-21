@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;  
+      border: 1px solid #ccc;
+    }
+    
+    label {
+      display: block; 
+      font-weight: bold;
+    }
+    
+    input {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid #aaa;
+    }
+    
+    button {
+      background-color: #0072ff;
+      color: white;  
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+  
+<body>
+
+  <form method="POST" action="/orm">
+    
+    <label>EmployeeID</label>
+    <input name="eid" placeholder="Enter your EmployeeID">
+
+    <label>First Name</label>
+    <input name="fname" placeholder="Enter your first name">
+
+    <label>Last Name</label>
+    <input name="lname" placeholder="Enter your last name">
+
+    <label>Salary</label>
+    <input name="sal" placeholder="Enter your Salary">
+
+    <label>PhoneNo</label>
+    <input name="phone" placeholder="Enter your PhoneNo">
+   
+    <label>Email</label>
+    <input name="email" type="email" placeholder="Enter your email">
+    
+    <label>DOB</label>
+    <input name="dob"  placeholder="Enter your DOB">
+
+    <label>JoiningDate</label>
+    <input name="jd"  placeholder="Enter your JoiningDate">
+   
+    <label>Jobrole</label>
+    <input name="jb"  placeholder="Enter your Jobrole">
+    <button type="submit">Save Employee</button>
+
+  </form>
+
+</body>
+</html>
+
+EmployeeID = Column(Integer, primary_key=True)
+    Fname = Column(String)
+    Lname = Column(String)
+    Salary =Column(Integer)
+    PhoneNo = Column(String)
+    Email = Column(String)
+    DOB =Column(String)
+    JoiningDate =Column(String)

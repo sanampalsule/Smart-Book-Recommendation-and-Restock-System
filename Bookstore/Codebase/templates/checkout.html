@@ -1,0 +1,21 @@
+<!-- checkout.html -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Checkout</h1>
+  Total:
+  <form method="POST" action="/placeOrder">
+    <label>Your Total is:</label>
+    
+    <input type="text" id="textbox1" value="{{ total_price }}" disabled>
+    <button>Place Order</button>
+</form> 
+  
+  
+
+  <a href="/">Back to Home</a>
+
+</body>
+</html>
