@@ -1,0 +1,5 @@
+ReturnID,CustomerID,BookISBN,Date,Reason,Status
+1,1,9780345437976,10/18/23,Bought by mistake,Processed
+2,2,9781400095469,1/16/23,Didn't like the book,Processed
+3,3,9781416516859,6/2/23,Bought by mistake,Processed
+4,4,9780060596385,6/18/23,Bought by mistake,Pending
